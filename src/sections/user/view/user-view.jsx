@@ -13,7 +13,12 @@ import TablePagination from '@mui/material/TablePagination';
 import { users } from 'src/_mock/user';
 
 import Iconify from 'src/components/iconify';
+import Link from '@mui/material/Link';
+
+import { RouterLink } from 'src/routes/components';
+
 import Scrollbar from 'src/components/scrollbar';
+
 
 import TableNoData from '../table-no-data';
 import UserTableRow from '../user-table-row';
@@ -21,7 +26,6 @@ import UserTableHead from '../user-table-head';
 import TableEmptyRows from '../table-empty-rows';
 import UserTableToolbar from '../user-table-toolbar';
 import { emptyRows, applyFilter, getComparator } from '../utils';
-
 // ----------------------------------------------------------------------
 
 export default function UserPage() {
@@ -35,7 +39,7 @@ export default function UserPage() {
 
   const [filterName, setFilterName] = useState('');
 
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
 
   const handleSort = (event, id) => {
     const isAsc = orderBy === id && order === 'asc';
@@ -99,8 +103,8 @@ export default function UserPage() {
       <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
         <Typography variant="h4">Users</Typography>
 
-        <Button variant="contained" color="inherit" startIcon={<Iconify icon="eva:plus-fill" />}>
-          New User
+        <Button variant="contained" color="inherit" startIcon={<Iconify icon="eva:plus-fill"/>}>
+          Add User
         </Button>
       </Stack>
 
@@ -122,11 +126,11 @@ export default function UserPage() {
                 onRequestSort={handleSort}
                 onSelectAllClick={handleSelectAllClick}
                 headLabel={[
-                  { id: 'name', label: 'Name' },
-                  { id: 'company', label: 'Company' },
-                  { id: 'role', label: 'Role' },
+                  { id: 'name', label: 'Student' },
+                  { id: 'company', label: 'Roll No.' },
+                  { id: 'role', label: 'Class' },
                   { id: 'isVerified', label: 'Verified', align: 'center' },
-                  { id: 'status', label: 'Status' },
+                  { id: 'status', label: 'Attandence' },
                   { id: '' },
                 ]}
               />

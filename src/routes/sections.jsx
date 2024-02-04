@@ -6,6 +6,7 @@ import DashboardLayout from 'src/layouts/dashboard';
 export const IndexPage = lazy(() => import('src/pages/app'));
 export const BlogPage = lazy(() => import('src/pages/blog'));
 export const UserPage = lazy(() => import('src/pages/user'));
+export const LoginHistoryPage = lazy(() => import('src/pages/loginHistory'));
 export const Trips = lazy(() => import('src/pages/trips'));
 export const FeesSubmissionPage = lazy(() => import('src/pages/feesSubmission'));
 export const LoginPage = lazy(() => import('src/pages/login'));
@@ -33,6 +34,7 @@ export default function Router() {
         { path: 'blog', element: <BlogPage /> },
         { path: 'feesSubmission', element: <FeesSubmissionPage /> },
         { path: 'permissionMgmt', element: <UserPage /> },
+        { path: 'loginHistory', element: <LoginHistoryPage /> }
       ],
     },
     {

@@ -44,7 +44,7 @@ const navConfig = [
   },
   {
     title: 'login history',
-    path: '/permissionMgmt',
+    path: '/loginHistory',
     icon: icon('ic_blog'),
   },
   {

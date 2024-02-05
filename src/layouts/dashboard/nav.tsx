@@ -41,7 +41,9 @@ export default function Nav({ openNav, onCloseNav }: { openNav: boolean, onClose
         px: 2.5,
         display: 'flex',
         borderRadius: 1.5,
+        borderStyle:'solid',
         alignItems: 'center',
+        color:'white',
         bgcolor: (theme) => alpha(theme.palette.grey[500], 0.12),
       }}
     >
@@ -131,6 +133,7 @@ export default function Nav({ openNav, onCloseNav }: { openNav: boolean, onClose
             position: 'fixed',
             width: NAV.WIDTH,
             borderRight: (theme) => `dashed 1px ${theme.palette.divider}`,
+            background:'black',
           }}
         >
           {renderContent}
@@ -142,6 +145,8 @@ export default function Nav({ openNav, onCloseNav }: { openNav: boolean, onClose
           PaperProps={{
             sx: {
               width: NAV.WIDTH,
+              background:'black',
+              color:'white'
             },
           }}
         >
@@ -167,15 +172,15 @@ function NavItem({ item }: { item: any }) {
         minHeight: 44,
         borderRadius: 0.75,
         typography: 'body2',
-        color: 'text.secondary',
+        color: 'white',
         textTransform: 'capitalize',
         fontWeight: 'fontWeightMedium',
         ...(active && {
-          color: 'primary.main',
+          color: 'black',
           fontWeight: 'fontWeightSemiBold',
-          bgcolor: (theme) => alpha(theme.palette.primary.main, 0.08),
+          bgcolor: '#fecf00',
           '&:hover': {
-            bgcolor: (theme) => alpha(theme.palette.primary.main, 0.16),
+            bgcolor: '#fecf00',
           },
         }),
       }}

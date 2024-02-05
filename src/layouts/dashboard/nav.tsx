@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-import PropTypes from 'prop-types';
-
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Drawer from '@mui/material/Drawer';
@@ -18,6 +16,7 @@ import { useResponsive } from '../../hooks/use-responsive';
 import { account } from '../../_mock/account';
 import Scrollbar from '../../components/scrollbar';
 import Logo from '../../components/logo';
+import * as React from 'react';
 
 // ----------------------------------------------------------------------
 

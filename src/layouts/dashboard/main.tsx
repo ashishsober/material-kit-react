@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 
 import { NAV, HEADER } from './config-layout';
 import { useResponsive } from '../../hooks/use-responsive';
+import * as React from 'react';
 
 // ----------------------------------------------------------------------
 

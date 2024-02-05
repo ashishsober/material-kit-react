@@ -14,6 +14,7 @@ import NotificationsPopover from './common/notifications-popover';
 import Iconify from '../../components/iconify/iconify';
 import { bgBlur } from '../../theme/css';
 import { useResponsive } from '../../hooks/use-responsive';
+import * as React from 'react';
 
 // ----------------------------------------------------------------------
 

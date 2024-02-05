@@ -1,5 +1,6 @@
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import * as React from 'react';
+import LoadingIndicator from '../components/loadingIndicator/LoadingIndicator';
 import { useCaseQueryData } from '../utils/use-query-hooks';
 // import { getData } from '../utils/http-service'
 
@@ -21,11 +22,12 @@ export default function loginHistory() {
 
     return (
         <>{
-            userDetailData && (
+            userDetailData ? (
             <div style={{ height: 350, width: '100%' }}>
                 <DataGrid rows={userDetailData} columns={columns} />
             </div>
-        )}
+        ) : <LoadingIndicator/>
+        }
         </>
     )
 }

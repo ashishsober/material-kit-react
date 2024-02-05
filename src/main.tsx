@@ -6,6 +6,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import App from './app';
 import * as ReactDOM from 'react-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import LoadingIndicator from './components/loadingIndicator/LoadingIndicator';
 
 // ----------------------------------------------------------------------
 const queryClient = new QueryClient({
@@ -18,7 +19,7 @@ const queryClient = new QueryClient({
 
 ReactDOM.render(<HelmetProvider>
   <BrowserRouter>
-    <Suspense>
+    <Suspense fallback={<LoadingIndicator/>}>
       <QueryClientProvider client={queryClient}>
         <App />
       </QueryClientProvider>

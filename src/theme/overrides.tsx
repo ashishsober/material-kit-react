@@ -145,9 +145,13 @@ export function overrides(theme:any):any {
     MuiDataGrid: {
       styleOverrides: {
         root: {
-          backgroundColor: theme.palette.background.neutral,
           color: theme.palette.text.secondary,
-        },
+          border: 'none',
+          borderRadius:'8px',
+          background: '#ffffff',
+          padding: '10px',
+
+        }
       },
     },
   };

@@ -8,6 +8,7 @@ import Container from '@mui/material/Container';
 // import TripWidgetSummary from '../sections/overview/app-trip-widget';
 import { useRouter } from '../routes/hooks';
 import Iconify from '../components/iconify';
+import LoadingIndicator from '../components/loadingIndicator/LoadingIndicator';
 
 export default function Trips() {
     const router = useRouter();

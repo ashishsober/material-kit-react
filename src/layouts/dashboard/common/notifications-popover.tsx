@@ -20,6 +20,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import Iconify from '../../../components/iconify';
 import Scrollbar from '../../../components/scrollbar';
 import { fToNow } from '../../../utils/format-time';
+import * as React from 'react';
 
 // import { fToNow } from 'src/utils/format-time';
 
@@ -195,7 +196,7 @@ NotificationItem.propTypes = {
   }),
 };
 
-function NotificationItem({ notification }) {
+function NotificationItem({ notification }:{notification:any}) {
   const { avatar, title } = renderContent(notification);
 
   return (

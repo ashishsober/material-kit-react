@@ -13,13 +13,14 @@ import ClickAwayListener from '@mui/material/ClickAwayListener';
 // import Iconify from 'src/components/iconify';
 import { bgBlur } from '../../../theme/css';
 import Iconify from '../../../components/iconify';
+import * as React from 'react';
 
 // ----------------------------------------------------------------------
 
 const HEADER_MOBILE = 64;
 const HEADER_DESKTOP = 92;
 
-const StyledSearchbar = styled('div')(({ theme }) => ({
+const StyledSearchbar = styled('div')(({ theme }:{ theme:any }) => ({
   ...bgBlur({
     color: theme.palette.background.default,
   }),

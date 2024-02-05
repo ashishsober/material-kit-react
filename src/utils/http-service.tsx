@@ -1,4 +1,4 @@
-export const headers = {
+export const headers:any = {
     mode: "cors",
     headers: {
         "access-control-allow-origin": "*",
@@ -6,12 +6,12 @@ export const headers = {
         
     }
 };
-// export const getData = async (apiUrl:any) => {
-//     const res = await fetch(
-//         apiUrl,
-//         {   ...headers,
-//             method: "GET"
-//         });
-//     const resData = await res.json();
-//     return resData;
-// };
+export const getData = async (apiUrl:any) => {
+    const res = await fetch(
+        apiUrl,
+        {   ...headers,
+            method: "GET"
+        });
+    const resData = await res.json();
+    return resData;
+};

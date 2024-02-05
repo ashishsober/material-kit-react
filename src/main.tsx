@@ -1,20 +1,29 @@
+import * as React from 'react';
 import { Suspense } from 'react';
-import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 import App from './app';
+import * as ReactDOM from 'react-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 // ----------------------------------------------------------------------
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  }
+});
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(
-  <HelmetProvider>
-    <BrowserRouter>
-      <Suspense>
+ReactDOM.render(<HelmetProvider>
+  <BrowserRouter>
+    <Suspense>
+      <QueryClientProvider client={queryClient}>
         <App />
-      </Suspense>
-    </BrowserRouter>
-  </HelmetProvider>
-);
+      </QueryClientProvider>
+    </Suspense>
+  </BrowserRouter>
+</HelmetProvider>,
+  document.getElementById('root'));
+
